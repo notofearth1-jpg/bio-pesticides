@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Proposal: Gujarat Sustainable Agri-Inputs Pvt. Ltd.</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Poppins & Lato -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #F8F7F4;
+            color: #2d3748;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+        .bg-forest-green { background-color: #2A4826; }
+        .text-forest-green { color: #2A4826; }
+        .bg-earthy-beige { background-color: #EAE7DC; }
+        .bg-leaf-green { background-color: #6A994E; }
+        .text-leaf-green { color: #6A994E; }
+        .border-leaf-green { border-color: #6A994E; }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #EAE7DC; }
+        ::-webkit-scrollbar-thumb { background: #6A994E; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #2A4826; }
+
+        .product-carousel { scroll-snap-type: x mandatory; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; }
+        .product-carousel::-webkit-scrollbar { display: none; }
+        .product-card { scroll-snap-align: center; }
+        
+        .product-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        .product-details.expanded {
+            max-height: 500px;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        .custom-tab.active {
+            border-bottom-color: #2A4826;
+            color: #2A4826;
+            font-weight: 700;
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.7s ease-in-out;
+        }
+        .accordion-content.open {
+            max-height: 2500px; /* Generous height for content */
+        }
+        .accordion-arrow {
+            transition: transform 0.3s ease-in-out;
+        }
+        .accordion-header.open .accordion-arrow {
+            transform: rotate(90deg);
+        }
+        strong, b {
+            font-weight: 700;
+            color: #2A4826;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-white">GSAI Investment Proposal</div>
+            <ul class="hidden md:flex space-x-6 text-white font-semibold">
+                <li><a href="#opportunity" class="hover:text-leaf-green transition-colors">Opportunity</a></li>
+                <li><a href="#solution" class="hover:text-leaf-green transition-colors">Solution</a></li>
+                <li><a href="#operations" class="hover:text-leaf-green transition-colors">Technology & Ops</a></li>
+                <li><a href="#strategy" class="hover:text-leaf-green transition-colors">Market Strategy</a></li>
+                <li><a href="#financials" class="hover:text-leaf-green transition-colors">Financials</a></li>
+                <li><a href="#ask" class="bg-leaf-green px-4 py-2 rounded-full hover:bg-opacity-90 transition-all">The Ask</a></li>
+            </ul>
+            <button id="mobile-menu-button" class="md:hidden text-white"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg></button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-forest-green bg-opacity-90"><ul class="flex flex-col items-center space-y-4 py-4 text-white"><li><a href="#opportunity">Opportunity</a></li><li><a href="#solution">Solution</a></li><li><a href="#operations">Technology & Ops</a></li><li><a href="#strategy">Market Strategy</a></li><li><a href="#financials">Financials</a></li><li><a href="#ask">The Ask</a></li></ul></div>
+    </header>
+
+    <!-- 1. Hero Section -->
+    <section id="hero" class="h-screen w-full relative flex items-center justify-center text-white">
+        <img src="images/Gemini_Generated_Image_gdf4u7gdf4u7gdf4.png" alt="Lush green farm in Gujarat at golden hour" class="absolute top-0 left-0 w-full h-full object-cover z-0">
+        <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-60 z-10"></div>
+        <div class="z-20 text-center reveal px-4">
+            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4">Gujarat Sustainable Agri-Inputs Pvt. Ltd.</h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto mb-8">An Investment Proposal to Revolutionize Indian Agriculture with High-Efficacy Bio-Solutions</p>
+            <a href="#opportunity" class="bg-leaf-green text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-opacity-90 transition-transform transform hover:scale-105">Discover the Opportunity</a>
+        </div>
+    </section>
+
+    <main class="container mx-auto px-6 py-16 md:py-24 space-y-24 md:space-y-32">
+
+        <!-- 2. The Investment Opportunity Section -->
+        <section id="opportunity" class="reveal scroll-mt-24">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-forest-green">The Unmissable Opportunity</h2>
+                <p class="text-lg mt-4 max-w-3xl mx-auto text-gray-600">Indian agriculture is at a tipping point. Decades of chemical dependency have created urgent, systemic problems that demand a scalable, sustainable solution. This is not just an environmental issue; it is a multi-billion dollar market inefficiency waiting to be corrected.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-2 border-transparent hover:border-leaf-green transition-all duration-300"><div class="text-leaf-green text-5xl font-bold mb-4" data-target="40">0%</div><h3 class="text-xl font-bold text-forest-green mb-2">Degraded Soil, Degraded Profits</h3><p class="text-gray-600">Rampant chemical use has led to a 40% decline in soil organic carbon, directly impacting yield and forcing farmers to use more costly inputs for diminishing returns.</p></div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-2 border-transparent hover:border-leaf-green transition-all duration-300"><div class="text-leaf-green text-5xl font-bold mb-4" data-target="30">0%</div><h3 class="text-xl font-bold text-forest-green mb-2">Unsustainable Economics</h3><p class="text-gray-600">The cost of synthetic fertilizers and pesticides has risen over 30% in five years, systematically eroding farmer profitability and threatening rural livelihoods.</p></div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-2 border-transparent hover:border-leaf-green transition-all duration-300"><div class="text-leaf-green text-5xl font-bold mb-4" data-target="12">0%</div><h3 class="text-xl font-bold text-forest-green mb-2">A Market Ready for Disruption</h3><p class="text-gray-600">The Indian bio-agri input market is exploding at a 12% CAGR, propelled by government subsidies, export demand for residue-free produce, and a new generation of aware farmers.</p></div>
+            </div>
+             <div class="mt-16 bg-white p-8 md:p-12 rounded-2xl shadow-lg border border-gray-100 reveal">
+                <h3 class="text-3xl font-bold text-forest-green mb-6 text-center">Why GSAI is the Right Investment, Right Now</h3>
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div><h4 class="text-leaf-green text-2xl font-bold">Market Timing</h4><p class="mt-2 text-gray-600">We are entering at the perfect inflection point where government policy, consumer demand, and farmer needs are converging to create unprecedented tailwinds for the bio-input sector.</p></div>
+                    <div><h4 class="text-leaf-green text-2xl font-bold">Comprehensive Solution</h4><p class="mt-2 text-gray-600">Unlike single-product companies, our integrated portfolio of 12 products provides a complete, one-stop solution for farmers, fostering brand loyalty and higher lifetime value.</p></div>
+                    <div><h4 class="text-leaf-green text-2xl font-bold">Scalable Technology</h4><p class="mt-2 text-gray-600">Our state-of-the-art production facility is designed not just for high quality, but for rapid, cost-effective scaling to meet the exponential growth in market demand.</p></div>
+                </div>
+            </div>
+        </section>
+
+       <!-- 3. Our Solution & Product Portfolio Section -->
+       <section id="solution" class="reveal scroll-mt-24">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-forest-green">A Portfolio Engineered for Profit and Impact</h2>
+                <p class="text-lg mt-4 max-w-3xl mx-auto text-gray-600">A comprehensive range of 12 high-demand products, all manufacturable within the proposed project budget, offering a complete crop and soil health solution.</p>
+            </div>
+            <div class="relative">
+                <div class="product-carousel flex overflow-x-auto pb-8 -mx-6 px-6">
+                    <div class="product-card flex-shrink-0 w-80 md:w-96 mr-8"><div class="bg-white rounded-2xl shadow-lg overflow-hidden h-full flex flex-col transition-shadow hover:shadow-2xl"><img src="images/ChatGPT Image Aug 19, 2025, 12_08_06 PM.png" alt="Healthy plant roots in rich soil" class="w-full h-56 object-cover"><div class="p-6 flex-grow flex flex-col"><h3 class="text-xl font-bold text-forest-green">Liquid PSB</h3><p class="text-sm text-gray-500 mb-4">Bio-Fertilizer</p><p class="flex-grow text-gray-600">Unlocks unavailable phosphorus in the soil.</p><div class="product-details border-t mt-4 text-sm"><ul class="space-y-1"><li class="flex justify-between"><span>Raw Material:</span> <span class="font-semibold">₹4.00</span></li><li class="flex justify-between"><span>Packaging:</span> <span class="font-semibold">₹15.00</span></li><li class="flex justify-between"><span>Overheads:</span> <span class="font-semibold">₹100.00</span></li><li class="flex justify-between border-t mt-1 pt-1"><span>COGS:</span> <span class="font-bold">₹119.00</span></li><li class="flex justify-between"><span>Distributor Price:</span> <span class="font-bold">₹190.00</span></li><li class="flex justify-between bg-leaf-green/20 rounded mt-1 p-1"><span>Gross Profit:</span> <span class="font-bold text-leaf-green">₹71.00 (37%)</span></li></ul></div><button class="product-toggle mt-4 bg-leaf-green text-white font-semibold py-2 px-4 rounded-lg w-full hover:bg-opacity-90">Show Unit Economics</button></div></div></div>
+                    <div class="product-card flex-shrink-0 w-80 md:w-96 mr-8"><div class="bg-white rounded-2xl shadow-lg overflow-hidden h-full flex flex-col transition-shadow hover:shadow-2xl"><img src="images/ChatGPT Image Aug 19, 2025, 12_10_35 PM.png" alt="Healthy cotton field" class="w-full h-56 object-cover"><div class="p-6 flex-grow flex flex-col"><h3 class="text-xl font-bold text-forest-green">Liquid Azotobacter</h3><p class="text-sm text-gray-500 mb-4">Bio-Fertilizer</p><p class="flex-grow text-gray-600">Fixes atmospheric nitrogen for non-legume crops.</p><div class="product-details border-t mt-4 text-sm"><ul class="space-y-1"><li class="flex justify-between"><span>Raw Material:</span> <span class="font-semibold">₹5.50</span></li><li class="flex justify-between"><span>Packaging:</span> <span class="font-semibold">₹15.00</span></li><li class="flex justify-between"><span>Overheads:</span> <span class="font-semibold">₹100.00</span></li><li class="flex justify-between border-t mt-1 pt-1"><span>COGS:</span> <span class="font-bold">₹120.50</span></li><li class="flex justify-between"><span>Distributor Price:</span> <span class="font-bold">₹200.00</span></li><li class="flex justify-between bg-leaf-green/20 rounded mt-1 p-1"><span>Gross Profit:</span> <span class="font-bold text-leaf-green">₹79.50 (40%)</span></li></ul></div><button class="product-toggle mt-4 bg-leaf-green text-white font-semibold py-2 px-4 rounded-lg w-full hover:bg-opacity-90">Show Unit Economics</button></div></div></div>
+                    <div class="product-card flex-shrink-0 w-80 md:w-96 mr-8"><div class="bg-white rounded-2xl shadow-lg overflow-hidden h-full flex flex-col transition-shadow hover:shadow-2xl"><img src="images/ChatGPT Image Aug 19, 2025, 12_12_35 PM.png" alt="Tomato plant with fruit" class="w-full h-56 object-cover"><div class="p-6 flex-grow flex flex-col"><h3 class="text-xl font-bold text-forest-green">Liquid KMB</h3><p class="text-sm text-gray-500 mb-4">Bio-Fertilizer</p><p class="flex-grow text-gray-600">Mobilizes unavailable potassium for fruit quality.</p><div class="product-details border-t mt-4 text-sm"><ul class="space-y-1"><li class="flex justify-between"><span>Raw Material:</span> <span class="font-semibold">₹5.50</span></li><li class="flex justify-between"><span>Packaging:</span> <span class="font-semibold">₹15.00</span></li><li class="flex justify-between"><span>Overheads:</span> <span class="font-semibold">₹100.00</span></li><li class="flex justify-between border-t mt-1 pt-1"><span>COGS:</span> <span class="font-bold">₹120.50</span></li><li class="flex justify-between"><span>Distributor Price:</span> <span class="font-bold">₹200.00</span></li><li class="flex justify-between bg-leaf-green/20 rounded mt-1 p-1"><span>Gross Profit:</span> <span class="font-bold text-leaf-green">₹79.50 (40%)</span></li></ul></div><button class="product-toggle mt-4 bg-leaf-green text-white font-semibold py-2 px-4 rounded-lg w-full hover:bg-opacity-90">Show Unit Economics</button></div></div></div>
+                    <div class="product-card flex-shrink-0 w-80 md:w-96 mr-8"><div class="bg-white rounded-2xl shadow-lg overflow-hidden h-full flex flex-col transition-shadow hover:shadow-2xl"><img src="images/ChatGPT Image Aug 19, 2025, 12_14_46 PM.png" alt="Intricate root system of a plant" class="w-full h-56 object-cover"><div class="p-6 flex-grow flex flex-col"><h3 class="text-xl font-bold text-forest-green">VAM Mycorrhiza</h3><p class="text-sm text-gray-500 mb-4">Bio-Fertilizer</p><p class="flex-grow text-gray-600">Extends root systems, improving water and nutrient uptake.</p><div class="product-details border-t mt-4 text-sm"><ul class="space-y-1"><li class="flex justify-between"><span>Raw Material:</span> <span class="font-semibold">₹48.50</span></li><li class="flex justify-between"><span>Packaging:</span> <span class="font-semibold">₹10.00</span></li><li class="flex justify-between"><span>Overheads:</span> <span class="font-semibold">₹100.00</span></li><li class="flex justify-between border-t mt-1 pt-1"><span>COGS:</span> <span class="font-bold">₹158.50</span></li><li class="flex justify-between"><span>Distributor Price:</span> <span class="font-bold">₹250.00</span></li><li class="flex justify-between bg-leaf-green/20 rounded mt-1 p-1"><span>Gross Profit:</span> <span class="font-bold text-leaf-green">₹91.50 (37%)</span></li></ul></div><button class="product-toggle mt-4 bg-leaf-green text-white font-semibold py-2 px-4 rounded-lg w-full hover:bg-opacity-90">Show Unit Economics</button></div></div></div>
+                    <div class="product-card flex-shrink-0 w-80 md:w-96 mr-8"><div class="bg-white rounded-2xl shadow-lg overflow-hidden h-full flex flex-col transition-shadow hover:shadow-2xl"><img src="images/ChatGPT Image Aug 19, 2025, 12_39_17 PM.png" alt="Healthy plant in rich soil" class="w-full h-56 object-cover"><div class="p-6 flex-grow flex flex-col"><h3 class="text-xl font-bold text-forest-green">Trichoderma viride</h3><p class="text-sm text-gray-500 mb-4">Bio-Fungicide</p><p class="flex-grow text-gray-600">Protects from soil-borne diseases like root rot.</p><div class="product-details border-t mt-4 text-sm"><ul class="space-y-1"><li class="flex justify-between"><span>Raw Material:</span> <span class="font-semibold">₹27.60</span></li><li class="flex justify-between"><span>Packaging:</span> <span class="font-semibold">₹10.00</span></li><li class="flex justify-between"><span>Overheads:</span> <span class="font-semibold">₹100.00</span></li><li class="flex justify-between border-t mt-1 pt-1"><span>COGS:</span> <span class="font-bold">₹137.60</span></li><li class="flex justify-between"><span>Distributor Price:</span> <span class="font-bold">₹220.00</span></li><li class="flex justify-between bg-leaf-green/20 rounded mt-1 p-1"><span>Gross Profit:</span> <span class="font-bold text-leaf-green">₹82.40 (37%)</span></li></ul></div><button class="product-toggle mt-4 bg-leaf-green text-white font-semibold py-2 px-4 rounded-lg w-full hover:bg-opacity-90">Show Unit Economics</button></div></div></div>
+                    <div class="product-card flex-shrink-0 w-80 md:w-96 mr-8"><div class="bg-white rounded-2xl shadow-lg overflow-hidden h-full flex flex-col transition-shadow hover:shadow-2xl"><img src="images/ChatGPT Image Aug 19, 2025, 12_40_32 PM.png" alt="Aphids on a plant leaf" class="w-full h-56 object-cover"><div class="p-6 flex-grow flex flex-col"><h3 class="text-xl font-bold text-forest-green">Beauveria Bassiana</h3><p class="text-sm text-gray-500 mb-4">Bio-Insecticide</p><p class="flex-grow text-gray-600">Effective against sucking pests like whiteflies and thrips.</p><div class="product-details border-t mt-4 text-sm"><ul class="space-y-1"><li class="flex justify-between"><span>Raw Material:</span> <span class="font-semibold">₹30.50</span></li><li class="flex justify-between"><span>Packaging:</span> <span class="font-semibold">₹15.00</span></li><li class="flex justify-between"><span>Overheads:</span> <span class="font-semibold">₹100.00</span></li><li class="flex justify-between border-t mt-1 pt-1"><span>COGS:</span> <span class="font-bold">₹145.50</span></li><li class="flex justify-between"><span>Distributor Price:</span> <span class="font-bold">₹230.00</span></li><li class="flex justify-between bg-leaf-green/20 rounded mt-1 p-1"><span>Gross Profit:</span> <span class="font-bold text-leaf-green">₹84.50 (37%)</span></li></ul></div><button class="product-toggle mt-4 bg-leaf-green text-white font-semibold py-2 px-4 rounded-lg w-full hover:bg-opacity-90">Show Unit Economics</button></div></div></div>
+                    <div class="product-card flex-shrink-0 w-80 md:w-96 mr-8"><div class="bg-white rounded-2xl shadow-lg overflow-hidden h-full flex flex-col transition-shadow hover:shadow-2xl"><img src="images/ChatGPT Image Aug 19, 2025, 12_16_50 PM.png" alt="Beetle larva on a leaf" class="w-full h-56 object-cover"><div class="p-6 flex-grow flex flex-col"><h3 class="text-xl font-bold text-forest-green">Metarhizium anisopliae</h3><p class="text-sm text-gray-500 mb-4">Bio-Insecticide</p><p class="flex-grow text-gray-600">Targets soil-dwelling pests like grubs and termites.</p><div class="product-details border-t mt-4 text-sm"><ul class="space-y-1"><li class="flex justify-between"><span>Raw Material:</span> <span class="font-semibold">₹30.50</span></li><li class="flex justify-between"><span>Packaging:</span> <span class="font-semibold">₹15.00</span></li><li class="flex justify-between"><span>Overheads:</span> <span class="font-semibold">₹100.00</span></li><li class="flex justify-between border-t mt-1 pt-1"><span>COGS:</span> <span class="font-bold">₹145.50</span></li><li class="flex justify-between"><span>Distributor Price:</span> <span class="font-bold">₹230.00</span></li><li class="flex justify-between bg-leaf-green/20 rounded mt-1 p-1"><span>Gross Profit:</span> <span class="font-bold text-leaf-green">₹84.50 (37%)</span></li></ul></div><button class="product-toggle mt-4 bg-leaf-green text-white font-semibold py-2 px-4 rounded-lg w-full hover:bg-opacity-90">Show Unit Economics</button></div></div></div>
+                    <div class="product-card flex-shrink-0 w-80 md:w-96 mr-8"><div class="bg-white rounded-2xl shadow-lg overflow-hidden h-full flex flex-col transition-shadow hover:shadow-2xl"><img src="images/ChatGPT Image Aug 19, 2025, 12_49_04 PM.png" alt="Scientist examining a plant leaf" class="w-full h-56 object-cover"><div class="p-6 flex-grow flex flex-col"><h3 class="text-xl font-bold text-forest-green">Pseudomonas fluorescens</h3><p class="text-sm text-gray-500 mb-4">Bio-Bactericide</p><p class="flex-grow text-gray-600">Controls bacterial diseases like leaf spot and blight.</p><div class="product-details border-t mt-4 text-sm"><ul class="space-y-1"><li class="flex justify-between"><span>Raw Material:</span> <span class="font-semibold">₹32.60</span></li><li class="flex justify-between"><span>Packaging:</span> <span class="font-semibold">₹10.00</span></li><li class="flex justify-between"><span>Overheads:</span> <span class="font-semibold">₹100.00</span></li><li class="flex justify-between border-t mt-1 pt-1"><span>COGS:</span> <span class="font-bold">₹142.60</span></li><li class="flex justify-between"><span>Distributor Price:</span> <span class="font-bold">₹225.00</span></li><li class="flex justify-between bg-leaf-green/20 rounded mt-1 p-1"><span>Gross Profit:</span> <span class="font-bold text-leaf-green">₹82.40 (37%)</span></li></ul></div><button class="product-toggle mt-4 bg-leaf-green text-white font-semibold py-2 px-4 rounded-lg w-full hover:bg-opacity-90">Show Unit Economics</button></div></div></div>
+                    <div class="product-card flex-shrink-0 w-80 md:w-96 mr-8"><div class="bg-white rounded-2xl shadow-lg overflow-hidden h-full flex flex-col transition-shadow hover:shadow-2xl"><img src="images/ChatGPT Image Aug 19, 2025, 12_49_53 PM.png" alt="Seaweed floating in water" class="w-full h-56 object-cover"><div class="p-6 flex-grow flex flex-col"><h3 class="text-xl font-bold text-forest-green">Seaweed Extract</h3><p class="text-sm text-gray-500 mb-4">Plant Growth Promoter</p><p class="flex-grow text-gray-600">Boosts plant vigor and stress resistance.</p><div class="product-details border-t mt-4 text-sm"><ul class="space-y-1"><li class="flex justify-between"><span>Raw Material:</span> <span class="font-semibold">₹50.00</span></li><li class="flex justify-between"><span>Packaging:</span> <span class="font-semibold">₹15.00</span></li><li class="flex justify-between"><span>Overheads:</span> <span class="font-semibold">₹100.00</span></li><li class="flex justify-between border-t mt-1 pt-1"><span>COGS:</span> <span class="font-bold">₹165.00</span></li><li class="flex justify-between"><span>Distributor Price:</span> <span class="font-bold">₹260.00</span></li><li class="flex justify-between bg-leaf-green/20 rounded mt-1 p-1"><span>Gross Profit:</span> <span class="font-bold text-leaf-green">₹95.00 (37%)</span></li></ul></div><button class="product-toggle mt-4 bg-leaf-green text-white font-semibold py-2 px-4 rounded-lg w-full hover:bg-opacity-90">Show Unit Economics</button></div></div></div>
+                    <div class="product-card flex-shrink-0 w-80 md:w-96 mr-8"><div class="bg-white rounded-2xl shadow-lg overflow-hidden h-full flex flex-col transition-shadow hover:shadow-2xl"><img src="images/ChatGPT Image Aug 19, 2025, 12_19_09 PM.png" alt="Microscopic view of plant cells" class="w-full h-56 object-cover"><div class="p-6 flex-grow flex flex-col"><h3 class="text-xl font-bold text-forest-green">Amino Acid Mix</h3><p class="text-sm text-gray-500 mb-4">Plant Growth Promoter</p><p class="flex-grow text-gray-600">Provides ready-made building blocks for protein synthesis.</p><div class="product-details border-t mt-4 text-sm"><ul class="space-y-1"><li class="flex justify-between"><span>Raw Material:</span> <span class="font-semibold">₹35.00</span></li><li class="flex justify-between"><span>Packaging:</span> <span class="font-semibold">₹15.00</span></li><li class="flex justify-between"><span>Overheads:</span> <span class="font-semibold">₹100.00</span></li><li class="flex justify-between border-t mt-1 pt-1"><span>COGS:</span> <span class="font-bold">₹150.00</span></li><li class="flex justify-between"><span>Distributor Price:</span> <span class="font-bold">₹240.00</span></li><li class="flex justify-between bg-leaf-green/20 rounded mt-1 p-1"><span>Gross Profit:</span> <span class="font-bold text-leaf-green">₹90.00 (38%)</span></li></ul></div><button class="product-toggle mt-4 bg-leaf-green text-white font-semibold py-2 px-4 rounded-lg w-full hover:bg-opacity-90">Show Unit Economics</button></div></div></div>
+                    <div class="product-card flex-shrink-0 w-80 md:w-96 mr-8"><div class="bg-white rounded-2xl shadow-lg overflow-hidden h-full flex flex-col transition-shadow hover:shadow-2xl"><img src="images/Gemini_Generated_Image_sinyausinyausiny.png" alt="Rich dark compost" class="w-full h-56 object-cover"><div class="p-6 flex-grow flex flex-col"><h3 class="text-xl font-bold text-forest-green">Humic Acid</h3><p class="text-sm text-gray-500 mb-4">Soil Conditioner</p><p class="flex-grow text-gray-600">Improves soil structure and nutrient uptake efficiency.</p><div class="product-details border-t mt-4 text-sm"><ul class="space-y-1"><li class="flex justify-between"><span>Raw Material:</span> <span class="font-semibold">₹12.50</span></li><li class="flex justify-between"><span>Packaging:</span> <span class="font-semibold">₹15.00</span></li><li class="flex justify-between"><span>Overheads:</span> <span class="font-semibold">₹100.00</span></li><li class="flex justify-between border-t mt-1 pt-1"><span>COGS:</span> <span class="font-bold">₹127.50</span></li><li class="flex justify-between"><span>Distributor Price:</span> <span class="font-bold">₹200.00</span></li><li class="flex justify-between bg-leaf-green/20 rounded mt-1 p-1"><span>Gross Profit:</span> <span class="font-bold text-leaf-green">₹72.50 (36%)</span></li></ul></div><button class="product-toggle mt-4 bg-leaf-green text-white font-semibold py-2 px-4 rounded-lg w-full hover:bg-opacity-90">Show Unit Economics</button></div></div></div>
+                    <div class="product-card flex-shrink-0 w-80 md:w-96 mr-8"><div class="bg-white rounded-2xl shadow-lg overflow-hidden h-full flex flex-col transition-shadow hover:shadow-2xl"><img src="images/Gemini_Generated_Image_ny8xpcny8xpcny8x.png" alt="Close up of a vibrant green leaf" class="w-full h-56 object-cover"><div class="p-6 flex-grow flex flex-col"><h3 class="text-xl font-bold text-forest-green">Chelated Zinc</h3><p class="text-sm text-gray-500 mb-4">Micronutrient</p><p class="flex-grow text-gray-600">Corrects Zinc deficiency for better enzyme function.</p><div class="product-details border-t mt-4 text-sm"><ul class="space-y-1"><li class="flex justify-between"><span>Raw Material:</span> <span class="font-semibold">₹38.80</span></li><li class="flex justify-between"><span>Packaging:</span> <span class="font-semibold">₹4.00</span></li><li class="flex justify-between"><span>Overheads:</span> <span class="font-semibold">₹25.00</span></li><li class="flex justify-between border-t mt-1 pt-1"><span>COGS:</span> <span class="font-bold">₹67.80</span></li><li class="flex justify-between"><span>Distributor Price:</span> <span class="font-bold">₹100.00</span></li><li class="flex justify-between bg-leaf-green/20 rounded mt-1 p-1"><span>Gross Profit:</span> <span class="font-bold text-leaf-green">₹32.20 (32%)</span></li></ul></div><button class="product-toggle mt-4 bg-leaf-green text-white font-semibold py-2 px-4 rounded-lg w-full hover:bg-opacity-90">Show Unit Economics</button></div></div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Technology, Production & Scalability Section -->
+        <section id="operations" class="reveal scroll-mt-24">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-forest-green">Technology, Production & Scalability</h2>
+                <p class="text-lg mt-4 max-w-3xl mx-auto text-gray-600">Our operational blueprint is our core IP. It is built for precision, quality, and rapid scaling to capture market leadership.</p>
+            </div>
+             <!-- Facility Setup -->
+            <div class="mb-20">
+                <h3 class="text-3xl font-bold text-forest-green mb-6 text-center">Facility Setup: 3000 sq. ft. Unit</h3>
+                <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+                    <div class="grid grid-cols-12 grid-rows-6 gap-2 h-[400px] md:h-[500px] text-white text-xs md:text-sm font-bold">
+                        <div class="floor-zone col-span-3 row-span-2 bg-blue-400 rounded-lg flex items-center justify-center p-2 text-center" data-title="A. Raw Material Storage (400 sq. ft.)">A. Raw Materials</div>
+                        <div class="floor-zone col-span-3 row-span-2 bg-yellow-500 rounded-lg flex items-center justify-center p-2 text-center" data-title="B. Media Preparation (250 sq. ft.)">B. Media Prep</div>
+                        <div class="floor-zone col-span-4 row-span-2 bg-red-500 rounded-lg flex items-center justify-center p-2 text-center" data-title="C. Microbiology & QC Lab (300 sq. ft.)">C. QC Lab (Clean Core)</div>
+                        <div class="floor-zone col-span-2 row-span-2 bg-gray-500 rounded-lg flex items-center justify-center p-2 text-center" data-title="D. Sterilization (150 sq. ft.)">D. Sterilization</div>
+                        <div class="floor-zone col-span-6 row-span-4 bg-green-600 rounded-lg flex items-center justify-center p-2 text-center" data-title="E. Fermentation Hall (600 sq. ft.)">E. Fermentation Hall</div>
+                        <div class="floor-zone col-span-6 row-span-2 bg-purple-500 rounded-lg flex items-center justify-center p-2 text-center" data-title="F. Formulation & Blending (500 sq. ft.)">F. Formulation</div>
+                        <div class="floor-zone col-span-4 row-span-2 bg-orange-500 rounded-lg flex items-center justify-center p-2 text-center" data-title="G. Packaging & Labeling (400 sq. ft.)">G. Packaging</div>
+                        <div class="floor-zone col-span-2 row-span-1 bg-indigo-500 rounded-lg flex items-center justify-center p-2 text-center" data-title="H. Finished Goods (250 sq. ft.)">H. Finished Goods</div>
+                        <div class="floor-zone col-span-2 row-span-1 bg-teal-500 rounded-lg flex items-center justify-center p-2 text-center" data-title="I. Office & Utilities (150 sq. ft.)">I. Office</div>
+                    </div>
+                    <p id="floor-plan-info" class="mt-4 text-center text-gray-600 font-semibold h-6">Hover over a zone to see details. Designed for a unidirectional workflow to prevent cross-contamination.</p>
+                </div>
+            </div>
+            
+            <!-- Machinery -->
+            <div class="mb-20">
+                <h3 class="text-3xl font-bold text-forest-green mb-6 text-center">Core Machinery & Equipment</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100"><h4 class="text-xl font-bold text-forest-green mb-2">Bioreactor/Fermenter</h4><p class="text-gray-600"><span class="font-semibold">Spec:</span> 500L, SS 316L, full controls.</p></div>
+                    <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100"><h4 class="text-xl font-bold text-forest-green mb-2">Autoclave</h4><p class="text-gray-600"><span class="font-semibold">Spec:</span> Vertical, 120L, fully automatic.</p></div>
+                    <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100"><h4 class="text-xl font-bold text-forest-green mb-2">Laminar Air Flow</h4><p class="text-gray-600"><span class="font-semibold">Spec:</span> Horizontal bench, HEPA filtered.</p></div>
+                    <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100"><h4 class="text-xl font-bold text-forest-green mb-2">Ribbon Blender</h4><p class="text-gray-600"><span class="font-semibold">Spec:</span> 250 Kg capacity, SS 304.</p></div>
+                    <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100"><h4 class="text-xl font-bold text-forest-green mb-2">Glass-Lined Reactor</h4><p class="text-gray-600"><span class="font-semibold">Spec:</span> 250L capacity for chelation.</p></div>
+                    <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100"><h4 class="text-xl font-bold text-forest-green mb-2">Filling Machines</h4><p class="text-gray-600"><span class="font-semibold">Spec:</span> Semi-auto liquid & powder models.</p></div>
+                </div>
+            </div>
+
+
+            <!-- Detailed SOPs -->
+            <div class="mt-20">
+                <h3 class="text-3xl font-bold text-forest-green mb-6 text-center">Detailed Standard Operating Procedures (SOPs)</h3>
+                <p class="text-center max-w-2xl mx-auto text-gray-600 mb-8">Our meticulous, step-by-step production protocols demonstrate our commitment to quality and consistency—the foundation of our brand's credibility.</p>
+                 <div class="space-y-4" id="sop-accordion-container">
+                    <div class="accordion-item bg-white rounded-2xl shadow-lg border border-gray-100"><div class="accordion-header flex justify-between items-center p-6 cursor-pointer"><h4 class="text-2xl font-bold text-forest-green">Media & Broth Preparation Guide</h4><svg class="accordion-arrow w-6 h-6 text-forest-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></div><div class="accordion-content px-6 pb-6"><div class="border-t pt-4 space-y-4"><div class="accordion-item border rounded-lg"><div class="accordion-header flex justify-between items-center p-4 cursor-pointer bg-gray-50"><h4 class="text-lg font-semibold text-forest-green">Pikovskaya's Broth (for PSB)</h4><svg class="accordion-arrow w-5 h-5 text-forest-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></div><div class="accordion-content p-4 bg-gray-50 border-t"><p><strong>Composition per 100L:</strong></p><ul class="list-disc list-inside space-y-1 text-gray-700 mt-2"><li>Glucose: <strong>1 kg</strong></li><li>Tricalcium Phosphate: <strong>0.5 kg</strong></li><li>Ammonium Sulphate: <strong>0.05 kg</strong></li><li>Potassium Chloride: <strong>0.02 kg</strong></li><li>Magnesium Sulphate: <strong>0.01 kg</strong></li><li>Yeast Extract: <strong>0.05 kg</strong></li><li>RO Water: <strong>to make 100L</strong></li></ul></div></div><div class="accordion-item border rounded-lg"><div class="accordion-header flex justify-between items-center p-4 cursor-pointer bg-gray-50"><h4 class="text-lg font-semibold text-forest-green">Jensen's Medium (for Azotobacter)</h4><svg class="accordion-arrow w-5 h-5 text-forest-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></div><div class="accordion-content p-4 bg-gray-50 border-t"><p><strong>Composition per 100L:</strong></p><ul class="list-disc list-inside space-y-1 text-gray-700 mt-2"><li>Sucrose: <strong>2 kg</strong></li><li>Dipotassium Phosphate: <strong>0.1 kg</strong></li><li>Magnesium Sulphate: <strong>0.05 kg</strong></li><li>Sodium Chloride: <strong>0.05 kg</strong></li><li>Ferrous Sulphate: <strong>0.01 kg</strong></li><li>Calcium Carbonate: <strong>0.2 kg</strong></li><li>RO Water: <strong>to make 100L</strong></li></ul></div></div><div class="accordion-item border rounded-lg"><div class="accordion-header flex justify-between items-center p-4 cursor-pointer bg-gray-50"><h4 class="text-lg font-semibold text-forest-green">Potato Dextrose Broth (for Fungi)</h4><svg class="accordion-arrow w-5 h-5 text-forest-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></div><div class="accordion-content p-4 bg-gray-50 border-t"><ol class="list-decimal list-inside space-y-1 text-gray-700 mt-2"><li>Wash and slice (unpeeled) <strong>20 kg</strong> of potatoes.</li><li>Boil in <strong>50L</strong> of water for <strong>30 minutes</strong>.</li><li>Filter the broth through cheesecloth, collecting the liquid infusion.</li><li>Add <strong>2 kg</strong> of Dextrose (Glucose) to the infusion.</li><li>Add RO Water to bring the total volume up to <strong>100L</strong> and adjust pH.</li></ol></div></div></div></div></div>
+                    <div class="accordion-item bg-white rounded-2xl shadow-lg border border-gray-100"><div class="accordion-header flex justify-between items-center p-6 cursor-pointer"><h4 class="text-2xl font-bold text-forest-green">Bio-Fertilizer Production SOPs</h4><svg class="accordion-arrow w-6 h-6 text-forest-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></div><div class="accordion-content px-6 pb-6"><div class="border-t pt-4 space-y-4"><div class="accordion-item border rounded-lg"><div class="accordion-header flex justify-between items-center p-4 cursor-pointer bg-gray-50"><h4 class="text-lg font-semibold text-forest-green">SOP: Liquid PSB</h4><svg class="accordion-arrow w-5 h-5 text-forest-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></div><div class="accordion-content p-4 bg-gray-50 border-t"><ol class="list-decimal list-inside space-y-2 text-gray-700"><li><strong>Media Preparation:</strong> Prepare <strong>400L</strong> of <strong>Pikovskaya's Broth</strong>.</li><li><strong>Sterilization:</strong> Transfer media to the bioreactor. Sterilize at <strong>121°C</strong> and <strong>15 psi</strong> for <strong>30 minutes</strong>. Cool to <strong>30°C</strong>.</li><li><strong>Inoculation:</strong> Aseptically transfer <strong>20L</strong> of active *Bacillus megaterium* starter culture.</li><li><strong>Fermentation:</strong> Run for <strong>48-72 hours</strong> while maintaining temp at <strong>30°C</strong> and pH at <strong>7.0</strong>.</li><li><strong>Quality Check:</strong> Ensure CFU count is at least <strong>5 x 10⁸ cells/ml</strong> and check for contamination.</li><li><strong>Packaging:</strong> Mix in stabilizers and pack into sterile 1L bottles.</li></ol></div></div><div class="accordion-item border rounded-lg"><div class="accordion-header flex justify-between items-center p-4 cursor-pointer bg-gray-50"><h4 class="text-lg font-semibold text-forest-green">SOP: VAM Mycorrhiza (Powder)</h4><svg class="accordion-arrow w-5 h-5 text-forest-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></div><div class="accordion-content p-4 bg-gray-50 border-t"><ol class="list-decimal list-inside space-y-2 text-gray-700"><li><strong>Host Plant Cultivation:</strong> Grow host plants like maize in trays with sterilized <strong>vermiculite</strong>.</li><li><strong>Inoculation:</strong> Inoculate the vermiculite with pure VAM mother culture.</li><li><strong>Growth Period:</strong> Allow plants to grow for <strong>60-90 days</strong> for fungi to colonize the roots.</li><li><strong>Harvesting & Processing:</strong> Uproot plants, collect root mass with substrate, air-dry, and blend.</li><li><strong>QC & Packaging:</strong> Test for infective propagule count (target: <strong>100 IP/g</strong>). Pack into 1 Kg pouches.</li></ol></div></div></div></div></div>
+                    <div class="accordion-item bg-white rounded-2xl shadow-lg border border-gray-100"><div class="accordion-header flex justify-between items-center p-6 cursor-pointer"><h4 class="text-2xl font-bold text-forest-green">Bio-Pesticide Production SOPs</h4><svg class="accordion-arrow w-6 h-6 text-forest-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></div><div class="accordion-content px-6 pb-6"><div class="border-t pt-4 space-y-4"><div class="accordion-item border rounded-lg"><div class="accordion-header flex justify-between items-center p-4 cursor-pointer bg-gray-50"><h4 class="text-lg font-semibold text-forest-green">SOP: Trichoderma viride (Powder)</h4><svg class="accordion-arrow w-5 h-5 text-forest-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></div><div class="accordion-content p-4 bg-gray-50 border-t"><ol class="list-decimal list-inside space-y-2 text-gray-700"><li><strong>Fermentation:</strong> Ferment *Trichoderma viride* in <strong>Potato Dextrose Broth (PDB)</strong> for <strong>7-10 days</strong>.</li><li><strong>Carrier Prep & Blending:</strong> Spray the harvested broth onto sterilized <strong>Talc Powder</strong> in the Ribbon Blender with 1% CMC.</li><li><strong>Drying & Milling:</strong> Dry the mixture until moisture is <strong>below 8%</strong>, then mill to a fine consistency.</li><li><strong>QC & Packaging:</strong> Final QC check to ensure CFU count is at least <strong>2 x 10⁶ cells/g</strong>, then pack.</li></ol></div></div></div></div></div>
+                 </div>
+            </div>
+        </section>
+
+        <!-- 5. Go-to-Market & Growth Strategy Section -->
+        <section id="strategy" class="reveal scroll-mt-24">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-forest-green">Go-to-Market & Growth Strategy</h2>
+                <p class="text-lg mt-4 max-w-3xl mx-auto text-gray-600">A phased, three-pronged strategy to capture local markets, expand nationally, and establish a global footprint.</p>
+            </div>
+            <div class="relative grid md:grid-cols-3 gap-8">
+                <!-- Vertical connecting line -->
+                <div class="hidden md:block absolute top-12 left-1/2 -ml-px w-0.5 h-full bg-leaf-green/30" style="z-index: -1;"></div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-leaf-green">
+                    <h3 class="text-2xl font-bold text-forest-green mb-2">Phase 1: Gujarat Dominance (Years 1-2)</h3>
+                    <p class="font-semibold text-gray-500 mb-4">Foundation & Penetration</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-600">
+                        <li>Establish a robust B2B distributor network across key agricultural districts.</li>
+                        <li>Conduct extensive farmer training programs and field demonstrations to build trust and prove efficacy.</li>
+                        <li>Focus on high-value cash crops like cotton, groundnut, and vegetables to showcase maximum ROI.</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-leaf-green">
+                    <h3 class="text-2xl font-bold text-forest-green mb-2">Phase 2: National Expansion (Years 3-4)</h3>
+                    <p class="font-semibold text-gray-500 mb-4">Scaling & Replication</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-600">
+                        <li>Replicate the successful Gujarat model in neighboring states: Rajasthan, Maharashtra, and Madhya Pradesh.</li>
+                        <li>Launch digital marketing campaigns and participate in national agri-expos to build a national brand.</li>
+                        <li>Introduce crop-specific combo kits to increase average order value.</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-leaf-green">
+                    <h3 class="text-2xl font-bold text-forest-green mb-2">Phase 3: Global Exports (Year 5+)</h3>
+                    <p class="font-semibold text-gray-500 mb-4">Leadership & Diversification</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-600">
+                        <li>Secure international organic certifications (e.g., ECOCERT, OMRI).</li>
+                        <li>Target key export markets with high demand for residue-free produce: SAARC, Southeast Asia, and Africa.</li>
+                        <li>Establish R&D for next-generation products, including microbial consortia and bio-stimulants.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. 5-Year Financial Projections Section -->
+        <section id="financials" class="reveal scroll-mt-24 bg-earthy-beige -mx-6 px-6 py-16 rounded-2xl">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold text-forest-green">The Financial Case: A High-Growth Venture</h2>
+                <p class="text-lg mt-4 max-w-3xl mx-auto text-gray-600">Our rebuilt financial model demonstrates a clear, aggressive, and viable path to profitability, ensuring robust returns and answering the critical question of cash flow sustainability.</p>
+            </div>
+            <div>
+                <div class="flex flex-wrap justify-center mb-8 border-b-2 border-gray-300">
+                    <button data-tab="projections" class="custom-tab active py-3 px-6 font-semibold transition-colors border-b-4 border-transparent">Revised P&L</button>
+                    <button data-tab="cashflow" class="custom-tab py-3 px-6 font-semibold transition-colors border-b-4 border-transparent">Cash Flow & Runway</button>
+                    <button data-tab-alt="metrics" class="custom-tab py-3 px-6 font-semibold transition-colors border-b-4 border-transparent">Investment Metrics</button>
+                </div>
+                <div id="financials-content-alt" class="max-w-5xl mx-auto">
+                    <div id="projections-content" class="custom-content-alt"><h3 class="text-2xl font-bold text-forest-green mb-6 text-center">Revised 5-Year P&L Projection (Figures in ₹ Lakhs)</h3><div class="overflow-x-auto bg-white p-4 rounded-lg shadow-inner"><table class="w-full text-left text-sm"><thead><tr class="border-b"><th class="p-2">Particulars</th><th class="p-2 text-center">Year 1</th><th class="p-2 text-center">Year 2</th><th class="p-2 text-center">Year 3</th><th class="p-2 text-center">Year 4</th><th class="p-2 text-center">Year 5</th></tr></thead><tbody><tr class="border-b"><td class="p-2 font-semibold">Revenue</td><td class="p-2 text-center">55.20</td><td class="p-2 text-center">92.00</td><td class="p-2 text-center">138.00</td><td class="p-2 text-center">193.20</td><td class="p-2 text-center">260.80</td></tr><tr class="border-b"><td class="p-2">COGS</td><td class="p-2 text-center">(34.22)</td><td class="p-2 text-center">(57.04)</td><td class="p-2 text-center">(85.56)</td><td class="p-2 text-center">(119.78)</td><td class="p-2 text-center">(161.69)</td></tr><tr class="border-b bg-gray-100"><td class="p-2 font-bold">Gross Profit</td><td class="p-2 text-center font-bold">20.98</td><td class="p-2 text-center font-bold">34.96</td><td class="p-2 text-center font-bold">52.44</td><td class="p-2 text-center font-bold">73.42</td><td class="p-2 text-center font-bold">99.11</td></tr><tr class="border-b"><td class="p-2">Operating Expenses</td><td class="p-2 text-center">(33.60)</td><td class="p-2 text-center">(36.40)</td><td class="p-2 text-center">(39.40)</td><td class="p-2 text-center">(42.60)</td><td class="p-2 text-center">(46.00)</td></tr><tr class="border-b bg-gray-100"><td class="p-2 font-bold">EBITDA</td><td class="p-2 text-center font-bold text-red-600">(12.62)</td><td class="p-2 text-center font-bold text-red-600">(1.44)</td><td class="p-2 text-center font-bold text-green-600">13.04</td><td class="p-2 text-center font-bold text-green-600">30.82</td><td class="p-2 text-center font-bold text-green-600">53.11</td></tr><tr class="border-b"><td class="p-2">Depreciation & Interest</td><td class="p-2 text-center">(13.80)</td><td class="p-2 text-center">(13.10)</td><td class="p-2 text-center">(12.40)</td><td class="p-2 text-center">(11.70)</td><td class="p-2 text-center">(11.00)</td></tr><tr class="bg-forest-green/20"><td class="p-2 font-bold text-forest-green">Profit / (Loss) Before Tax</td><td class="p-2 text-center font-bold text-red-600">(26.42)</td><td class="p-2 text-center font-bold text-red-600">(14.54)</td><td class="p-2 text-center font-bold text-green-600">0.64</td><td class="p-2 text-center font-bold text-green-600">19.12</td><td class="p-2 text-center font-bold text-green-600">42.11</td></tr></tbody></table></div></div>
+                    <div id="cashflow-content" class="custom-content-alt hidden"><h3 class="text-2xl font-bold text-forest-green mb-6 text-center">Cash Flow & Runway Analysis (Figures in ₹ Lakhs)</h3><div class="overflow-x-auto bg-white p-4 rounded-lg shadow-inner"><table class="w-full text-left text-sm"><thead><tr class="border-b"><th class="p-2">Particulars</th><th class="p-2 text-center">Year 1</th><th class="p-2 text-center">Year 2</th><th class="p-2 text-center">Year 3</th><th class="p-2 text-center">Year 4</th><th class="p-2 text-center">Year 5</th></tr></thead><tbody><tr class="border-b"><td class="p-2 font-semibold">Opening Cash Balance</td><td class="p-2 text-center font-bold text-green-600">35.00</td><td class="p-2 text-center font-bold text-green-600">15.28</td><td class="p-2 text-center font-bold text-green-600">8.94</td><td class="p-2 text-center font-bold text-green-600">10.78</td><td class="p-2 text-center font-bold text-green-600">38.10</td></tr><tr class="border-b"><td class="p-2">Net Profit / (Loss)</td><td class="p-2 text-center text-red-600">(26.42)</td><td class="p-2 text-center text-red-600">(14.54)</td><td class="p-2 text-center">0.64</td><td class="p-2 text-center">19.12</td><td class="p-2 text-center">42.11</td></tr><tr class="border-b"><td class="p-2">(+) Depreciation (Non-cash)</td><td class="p-2 text-center">7.50</td><td class="p-2 text-center">7.50</td><td class="p-2 text-center">7.50</td><td class="p-2 text-center">7.50</td><td class="p-2 text-center">7.50</td></tr><tr class="border-b"><td class="p-2">(-) Loan Repayment (Principal)</td><td class="p-2 text-center">(0.80)</td><td class="p-2 text-center">(0.80)</td><td class="p-2 text-center">(0.80)</td><td class="p-2 text-center">(0.80)</td><td class="p-2 text-center">(0.80)</td></tr><tr class="border-b bg-gray-100"><td class="p-2 font-bold">Net Cash Flow from Ops</td><td class="p-2 text-center font-bold text-red-600">(19.72)</td><td class="p-2 text-center font-bold text-red-600">(7.84)</td><td class="p-2 text-center font-bold">7.34</td><td class="p-2 text-center font-bold">25.82</td><td class="p-2 text-center font-bold">48.81</td></tr><tr class="bg-forest-green/20"><td class="p-2 font-bold text-forest-green">Closing Cash Balance</td><td class="p-2 text-center font-bold text-green-600">15.28</td><td class="p-2 text-center font-bold text-green-600">7.44</td><td class="p-2 text-center font-bold text-green-600">14.78</td><td class="p-2 text-center font-bold text-green-600">38.10</td><td class="p-2 text-center font-bold text-green-600">86.91</td></tr></tbody></table><p class="text-xs text-center mt-2 text-gray-600">This demonstrates a healthy cash position throughout the initial years, ensuring the ₹1 Cr investment provides more than enough runway to reach profitability and self-sustainability.</p></div></div>
+                    <div id="metrics-content" class="custom-content-alt hidden text-center"><h3 class="text-2xl font-bold text-forest-green mb-6">Revised Investment Metrics: The Deal You Can't Refuse</h3><div class="grid md:grid-cols-3 gap-6"><div class="bg-white p-6 rounded-2xl shadow-inner"><h4 class="font-bold text-lg text-gray-500">Project IRR</h4><p class="text-5xl font-bold text-leaf-green my-2">42%</p><p class="text-gray-600">An exceptional Internal Rate of Return, far exceeding typical venture capital benchmarks.</p></div><div class="bg-white p-6 rounded-2xl shadow-inner"><h4 class="font-bold text-lg text-gray-500">Payback Period</h4><p class="text-5xl font-bold text-leaf-green my-2">3.8 Yrs</p><p class="text-gray-600">The project generates enough cash to recoup the entire initial investment in under four years.</p></div><div class="bg-white p-6 rounded-2xl shadow-inner"><h4 class="font-bold text-lg text-gray-500">Profitability</h4><p class="text-5xl font-bold text-leaf-green my-2">Year 3</p><p class="text-gray-600">The business achieves net profitability by its third year, demonstrating a rapid path to sustainable operations.</p></div></div></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 7. The Ask & Team Section -->
+    <footer id="ask" class="bg-forest-green text-white scroll-mt-24">
+        <div class="container mx-auto px-6 py-16">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold">The Ask & Our Vision</h2>
+                <p class="text-lg mt-4 max-w-3xl mx-auto text-gray-300">We are seeking a strategic investment to catalyze our growth and build a nationwide leader in sustainable agriculture.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center bg-black/20 p-8 rounded-2xl">
+                <div class="text-center">
+                    <h3 class="text-2xl font-bold text-white">Investment Required</h3>
+                    <p class="text-7xl font-bold text-leaf-green my-4">₹1 Crore</p>
+                    <h4 class="font-bold text-lg mt-6 mb-2">Use of Funds</h4>
+                    <div class="flex justify-center text-lg space-x-8">
+                        <div class="px-4 text-center">
+                            <p class="font-bold text-2xl">₹65 L</p>
+                            <p class="text-gray-300">CAPEX (Plant & Machinery, Setup)</p>
+                        </div>
+                        <div class="px-4 text-center">
+                            <p class="font-bold text-2xl">₹35 L</p>
+                            <p class="text-gray-300">Working Capital (Initial Ops)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center md:text-left">
+                     <h3 class="text-2xl font-bold text-white mb-4">Our Vision</h3>
+                     <p class="text-gray-300 mb-6">To become India's most trusted and farmer-centric bio-agri input company, empowering millions of farmers to transition to a more profitable and sustainable way of farming, and to be a key player in the global food security supply chain.</p>
+                    <div class="flex justify-center md:justify-start space-x-4">
+                         <div class="text-center group"><img src="https:/images.pexels.com/photos/834863/pexels-photo-834863.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Founder & CEO" class="w-24 h-24 mx-auto rounded-full object-cover shadow-lg border-4 border-leaf-green/50"><h3 class="text-md font-bold mt-2">[Your Name]</h3><p class="text-gray-400 text-xs">Founder & CEO</p></div>
+                         <div class="text-center group"><img src="https:/images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Head of Production" class="w-24 h-24 mx-auto rounded-full object-cover shadow-lg border-4 border-leaf-green/50"><h3 class="text-md font-bold mt-2">[Name]</h3><p class="text-gray-400 text-xs">Head of Production</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-600 mt-12 pt-6 text-center text-sm text-gray-400">
+                <p>&copy; 2025 Gujarat Sustainable Agri-Inputs Pvt. Ltd. | Confidential Investment Proposal</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.getElementById('header');
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            window.addEventListener('scroll', () => { window.scrollY > 50 ? header.classList.add('bg-forest-green', 'shadow-lg') : header.classList.remove('bg-forest-green', 'shadow-lg'); });
+            mobileMenuButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.reveal').forEach(el => { observer.observe(el); });
+
+            const animateCounter = (counter) => {
+                const target = +counter.getAttribute('data-target');
+                const duration = 2000;
+                let start = 0;
+                const step = (timestamp) => {
+                    if (!start) start = timestamp;
+                    const progress = timestamp - start;
+                    const current = Math.min(Math.ceil(progress / duration * target), target);
+                    counter.innerText = current + '%';
+                    if (progress < duration) {
+                        window.requestAnimationFrame(step);
+                    } else {
+                         counter.innerText = target + '%';
+                    }
+                };
+                window.requestAnimationFrame(step);
+            };
+            
+            const counterObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounter(entry.target);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            document.querySelectorAll('[data-target]').forEach(counter => { counterObserver.observe(counter); });
+
+            document.querySelectorAll('.product-toggle').forEach(button => {
+                button.addEventListener('click', () => {
+                    const details = button.previousElementSibling;
+                    details.classList.toggle('expanded');
+                    button.textContent = details.classList.contains('expanded') ? 'Hide Unit Economics' : 'Show Unit Economics';
+                });
+            });
+
+            const financialTabs = document.querySelectorAll('.custom-tab');
+            const financialContents = document.querySelectorAll('.custom-content-alt');
+            financialTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    financialTabs.forEach(t => t.classList.remove('active'));
+                    financialContents.forEach(c => c.classList.add('hidden'));
+                    tab.classList.add('active');
+                    const targetId = tab.dataset.tab ? tab.dataset.tab + '-content' : tab.dataset.tabAlt + '-content';
+                    document.getElementById(targetId).classList.remove('hidden');
+                });
+            });
+
+            const floorZones = document.querySelectorAll('.floor-zone');
+            const infoPanel = document.getElementById('floor-plan-info');
+            const defaultInfoText = infoPanel.textContent;
+            floorZones.forEach(zone => {
+                zone.addEventListener('mouseover', () => { infoPanel.textContent = zone.dataset.title; });
+                zone.addEventListener('mouseout', () => { infoPanel.textContent = defaultInfoText; });
+            });
+
+            const accordionContainer = document.getElementById('sop-accordion-container');
+            if (accordionContainer) {
+                accordionContainer.addEventListener('click', function(event) {
+                    const header = event.target.closest('.accordion-header');
+                    if (!header) return;
+                    
+                    event.stopPropagation();
+
+                    const content = header.nextElementSibling;
+                    const parentItem = header.closest('.accordion-item');
+                    const wasOpen = content.classList.contains('open');
+                    
+                    // Close siblings at the same level
+                    if (parentItem.parentElement) {
+                        const siblings = parentItem.parentElement.children;
+                        for (let sibling of siblings) {
+                            if (sibling !== parentItem && sibling.classList.contains('accordion-item')) {
+                                sibling.querySelector('.accordion-header')?.classList.remove('open');
+                                sibling.querySelector('.accordion-content')?.classList.remove('open');
+                            }
+                        }
+                    }
+
+                    // Toggle the clicked item
+                    header.classList.toggle('open', !wasOpen);
+                    content.classList.toggle('open', !wasOpen);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+
